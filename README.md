@@ -5,6 +5,7 @@
 ## Description
         
 The README.md Generator can generate an README.md file by using the Node.js technology to run this program and accept user input to create variable text.
+Here is a video overview of README.md: https://youtu.be/BMwi21-fdRg
 
 ## Table of Contents
 - [Installation](#installation)
