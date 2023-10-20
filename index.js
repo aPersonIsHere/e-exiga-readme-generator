@@ -151,7 +151,7 @@ Feel free to reach out through email by highlighting my email address and copy-a
 Feel free to ask further questions, provide suggestions, or to send a thank you note!
 
         `;
-        writeToFile('READMECOPY.md', readmeText);
+        writeToFile('README.md', readmeText);
     })
 }
 
