@@ -31,7 +31,7 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Provide credits for this README: ',
+        message: 'Provide credits for this project: ',
         name: 'credits'
     },
     {
@@ -75,8 +75,29 @@ function init() {
         .prompt(questions)
     .then((responses) => {
         console.log(responses);
+        var creditBanner = '';
+        switch(responses.license) {
+            case 'MIT':
+                creditBanner = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+                break;
+            case 'GPLv2':
+                creditBanner = "[![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)";
+                break;
+            case 'Apache':
+                creditBanner = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+                break;
+            case 'GPLv3':
+                creditBanner = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+                break;
+            case 'BSD 3-clause':
+                creditBanner = "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
+                break;
+            default:    
+                creditBanner = "";
+        }
         readmeText = `
 # ${responses.title}
+${creditBanner}
 
 ## Description
         
@@ -129,11 +150,6 @@ ${responses.test}
 Feel free to reach out through email by highlighting my email address and copy-and-paste it to your recipient. 
 Feel free to ask further questions, provide suggestions, or to send a thank you note!
 
----
-        
-## Badges
-        
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
         `;
         writeToFile('READMECOPY.md', readmeText);
     })
