@@ -49,7 +49,7 @@ There are no instructions to test this project.
 
 ### My GitHub: [aPersonIsHere](https://www.github.com/aPersonIsHere)
 
-### My Email: emmanuelexiga.2001@gmail.com
+### My Email: emmanuelexiga.2000@gmail.com
 
 Feel free to reach out through email by highlighting my email address and copy-and-paste it to your recipient. 
 Feel free to ask further questions, provide suggestions, or to send a thank you note!
